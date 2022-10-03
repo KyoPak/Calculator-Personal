@@ -145,7 +145,5 @@ historyScrollView.setContentOffset(CGPoint(x: 0, y: contentOffsetValue), animate
     - 0을 따로 누르면 0을 포함한 계산 기능 구현했습니다.
     
     
-    
-## 📚 참고 링크
 ## 📚 참고 링크
 [Swift Language Guide - Protocols](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html)<br>[Swift Language Guide - Extentions](https://docs.swift.org/swift-book/LanguageGuide/Extensions.html)<br>[Swift Language Guide - Error Handling](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html)<br>[NumberFormatter](https://developer.apple.com/documentation/foundation/numberformatter)<br>[오토레이아웃 정복하기 - 야곰닷넷](https://yagom.net/courses/autolayout/)
