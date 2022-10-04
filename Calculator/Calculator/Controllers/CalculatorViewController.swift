@@ -183,7 +183,7 @@ final class CalculatorViewController: UIViewController {
             return
         } else {
             currentOperand += Constant.dot
-            updateResultLabel()
+            resultLabel.text = currentOperand
         }
     }
     
