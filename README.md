@@ -5,7 +5,7 @@
 2. [개발환경 및 라이브러리](#-개발환경-및-라이브러리)
 3. [팀원](#-팀원)
 4. [타임라인](#-타임라인)
-5. [UML](#-uml)
+5. [UML](#-UML)
 6. [실행화면](#-실행-화면)
 7. [트러블 슈팅 및 고민](#-트러블-슈팅-및-고민)
 8. [참고링크](#-참고-링크)
@@ -30,7 +30,8 @@
 
 Step - 3 : 2022.09.27 ~ 10.01
 
-## UML
+
+## ⚙️ UML
 <details>
 <summary> 
 펼쳐보기
@@ -40,14 +41,16 @@ Step - 3 : 2022.09.27 ~ 10.01
     
 </details>
 
+
+
 ## 💻 실행 화면 
-|일반계산|=후 연속계산|.= 사용계산|
+|일반계산|=후 연속계산|.,- 사용계산|
 |------|--|---|
-![일반계산](https://user-images.githubusercontent.com/59204352/193397730-71dccf16-7d0c-4379-98e0-0175584225d6.gif)|![=계산후연속계산](https://user-images.githubusercontent.com/59204352/193397958-a4903193-62cc-4cfc-8224-4dda42cc804c.gif)|![- 사용계산](https://user-images.githubusercontent.com/59204352/193398362-5cdb3c94-6d83-48cf-9452-aa3fbc15e889.gif)
+![일반계산](https://user-images.githubusercontent.com/59204352/193729556-202e49fc-a65e-45bd-81f3-e99eb46dec2b.gif)|![연속계산](https://user-images.githubusercontent.com/59204352/193729600-3cf71d6b-4369-40cf-a86c-ba7640be61f5.gif)|![- 버튼연산](https://user-images.githubusercontent.com/59204352/193729706-4cbad361-6ac0-407f-85ac-5665b60c44eb.gif)
 
 |AC 버튼클릭|CE 버튼클릭|계산내역|
 |------|--|---|
-![AC](https://user-images.githubusercontent.com/59204352/193398574-bd2372ee-cc31-4480-a7fb-412b8cd608c9.gif)|![CE](https://user-images.githubusercontent.com/59204352/193398209-8b245294-927b-4535-aab9-9c0a9874499c.gif)|![계산내역](https://user-images.githubusercontent.com/59204352/193398781-6142ec91-e7b2-4322-8c4e-5a86e03826db.gif)
+![AC버튼](https://user-images.githubusercontent.com/59204352/193729761-2d302f55-15b2-43c8-95f0-eb35376c8170.gif)|![EC버튼](https://user-images.githubusercontent.com/59204352/193729774-ff6208a0-b167-4ce7-8ed5-b148b274a751.gif)|![계산내역](https://user-images.githubusercontent.com/59204352/193729825-1efe6006-b630-414c-bd8c-f6b7ad9c7dbf.gif)
 
 
 
