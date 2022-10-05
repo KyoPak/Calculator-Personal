@@ -1,5 +1,5 @@
 //
-//  Calculator - ViewController.swift
+//  Calculator - CalculatorViewController.swift
 //  Created by yagom. 
 //  Copyright © yagom. All rights reserved.
 // 
@@ -160,7 +160,11 @@ final class CalculatorViewController: UIViewController {
         operatorLabel.text = Constant.empty
         
         let formula = ExpressionParser.parse(from: removeFirstHistory.joined())
-        
+     
+        executeCalculate(formula)
+    }
+    
+    private func executeCalculate(_ formula: Formula) {
         do {
             let result = try formula.result()
             if result.isNaN {
