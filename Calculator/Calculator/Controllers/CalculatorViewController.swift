@@ -38,10 +38,21 @@ final class CalculatorViewController: UIViewController {
         historyStackView.subviews.forEach{ $0.removeFromSuperview() }
     }
     
+    private func convertOperandToDouble() throws -> Double {
+        guard let convertToDouble = Double(currentOperand) else { throw CalculatorError.convertFailToDouble }
+        return convertToDouble
+    }
+    
     private func updateResultLabel() {
-        guard let convertToDouble = Double(currentOperand) else { return }
-        let currentExpression = applyNumberFormatter(number: convertToDouble)
-        resultLabel.text = currentExpression
+        do {
+            let convertToDouble = try convertOperandToDouble()
+            let currentExpression = applyNumberFormatter(number: convertToDouble)
+            resultLabel.text = currentExpression
+        } catch {
+            if let error = error as? CalculatorError {
+                resultLabel.text = error.message
+            }
+        }
     }
     
     private func applyNumberFormatter(number: Double) -> String {
@@ -173,12 +184,10 @@ final class CalculatorViewController: UIViewController {
                 resultLabel.text = applyNumberFormatter(number: result)
             }
             currentOperand = Constant.zero
-        } catch CalculatorError.noneOperand {
-            print(Constant.noneOperand)
-        } catch CalculatorError.noneOperator {
-            print(Constant.noneOperator)
         } catch {
-            print(Constant.error)
+            if let error = error as? CalculatorError {
+                resultLabel.text = error.message
+            }
         }
     }
     
