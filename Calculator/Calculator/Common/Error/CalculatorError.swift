@@ -10,6 +10,7 @@ enum CalculatorError: Error {
     case noneOperator
     case convertFailToDouble
     case someError
+    case unknownError
     
     var message: String {
         switch self {
@@ -21,6 +22,8 @@ enum CalculatorError: Error {
             return "ConvertFail Error"
         case .someError:
             return "Some Error"
+        case .unknownError:
+            return "Unknown Error"
         }
     }
 }

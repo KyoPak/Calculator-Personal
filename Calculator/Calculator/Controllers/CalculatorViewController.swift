@@ -51,6 +51,8 @@ final class CalculatorViewController: UIViewController {
         } catch {
             if let error = error as? CalculatorError {
                 resultLabel.text = error.message
+            } else {
+                resultLabel.text = CalculatorError.unknownError.message
             }
         }
     }
@@ -187,6 +189,8 @@ final class CalculatorViewController: UIViewController {
         } catch {
             if let error = error as? CalculatorError {
                 resultLabel.text = error.message
+            } else {
+                resultLabel.text = CalculatorError.unknownError.message
             }
         }
     }
