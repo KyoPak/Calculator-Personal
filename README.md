@@ -147,6 +147,28 @@ historyScrollView.setContentOffset(CGPoint(x: 0, y: contentOffsetValue), animate
     - NumberFormatter 적용을 계산 결과 Label 뿐만 아니라 History에도 적용하였습니다.
     - 0을 따로 누르면 0을 포함한 계산 기능 구현했습니다.
     
+#### ***4. Error Handling에서의 타입캐스팅!***
+- Error가 발생한다면 resultLabel에 Error Message를 표기하는 방식으로 이용자에게 Error를 전달해주고자 하였습니다. 때문에 발생한 Error와 보여줘야할 Message를 아래와 같은 코드로 일일이 매칭을 해줘야 했습니다.
+```swift
+} catch CalculatorError.ErrorA {
+    resultLabel.text = CalculatorError.ErrorA.message 
+    ...
+} catch {
+    resultLabel.text = CalculatorError.ErrorB.message
+```
+- 하지만 위와 같은 방식은 아래코드처럼 매칭이 잘못될 확률이 있다고 피드백을 받았습니다. 
+```swift
+} catch CalculatorError.ErrorA {
+    resultLabel.text = CalculatorError.ErrorC.message 
+```
+- 타입캐스팅이란 방법을 조언을 받은 후, 전달받은 error타입의 변수를 CalculatorError타입으로 다운캐스팅을 한다면 일일이 매칭하지 않아도 된다는 것을 알게 되었습니다. Error마다 처리방법이 다르다면 일일이 처리방법들을 구현해줘야하지만 지금과 같은 로직이라면 이러한 방법을 사용하여 개발자의 실수를 줄일 수 있고 코드도 간결해진다고 생각합니다. 
+```swift
+} catch {
+    if let error = error as? CalculatorError {
+    resultLabel.text = error.message
+    }
+}
+```
     
 ## 📚 참고 링크
 [Swift Language Guide - Protocols](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html)<br>[Swift Language Guide - Extentions](https://docs.swift.org/swift-book/LanguageGuide/Extensions.html)<br>[Swift Language Guide - Error Handling](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html)<br>[NumberFormatter](https://developer.apple.com/documentation/foundation/numberformatter)<br>[오토레이아웃 정복하기 - 야곰닷넷](https://yagom.net/courses/autolayout/)
