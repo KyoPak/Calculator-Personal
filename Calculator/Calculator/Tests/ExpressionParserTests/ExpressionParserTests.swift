@@ -11,13 +11,13 @@ import XCTest
 class ExpressionParserTests: XCTestCase {
     
     func test_parse_test() {
-        let input = "123+234-2*8"
+        let input = "123+234−2×8"
         let result = try? ExpressionParser.parse(from: input).result()
         XCTAssertEqual(result, (123+234-2)*8)
     }
     
     func test_operands_check() {
-        let input = "123+234-2*8"
+        let input = "123+234−2×8"
         let result = ExpressionParser.parse(from: input).operands
         
         let inputOperands = ["123", "234", "2", "8"]
@@ -33,10 +33,10 @@ class ExpressionParserTests: XCTestCase {
     }
     
     func test_operators_check() {
-        let input = "123+234-2*8"
+        let input = "123+234−2×8"
         let result = ExpressionParser.parse(from: input).operators
         
-        let inputOperators = ["+", "-", "*"]
+        let inputOperators = ["+", "−", "×"]
         var testResult = true
         
     
@@ -70,7 +70,7 @@ class ExpressionParserTests: XCTestCase {
         let input = ""
         let result = ExpressionParser.parse(from: input).operators
         
-        let inputOperators: [String] = ["+","-"]
+        let inputOperators: [String] = ["+","−"]
         var testResult = true
         for item in inputOperators {
             if Operator(rawValue: Character(item)) == result.dequeue() {
