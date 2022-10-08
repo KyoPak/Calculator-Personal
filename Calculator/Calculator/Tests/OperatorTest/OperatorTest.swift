@@ -24,31 +24,37 @@ class OperatorTest: XCTestCase {
     }
     
     func test_subtract() {
-        sut = Operator(rawValue: "-")
+        sut = Operator(rawValue: "−")
         let result = sut.calculator(lhs: 20.0, rhs: 10.0)
         XCTAssertEqual(result, 10.0)
     }
     
     func test_subtract_result_is_minus() {
-        sut = Operator(rawValue: "-")
+        sut = Operator(rawValue: "−")
         let result = sut.calculator(lhs: 10.0, rhs: 20.0)
         XCTAssertEqual(result, -10.0)
     }
     
     func test_divide() {
-        sut = Operator(rawValue: "/")
+        sut = Operator(rawValue: "÷")
         let result = sut.calculator(lhs: 20.0, rhs: 10.0)
         XCTAssertEqual(result, 2.0)
     }
     
     func test_divide_result_is_under_zero() {
-        sut = Operator(rawValue: "/")
+        sut = Operator(rawValue: "÷")
         let result = sut.calculator(lhs: 10.0, rhs: 20.0)
         XCTAssertEqual(result, 0.5 )
     }
     
+    func test_divide_result_is_nan() {
+        sut = Operator(rawValue: "÷")
+        let result = sut.calculator(lhs: 10.0, rhs: 0)
+        XCTAssertTrue(result.isNaN)
+    }
+    
     func test_multifly() {
-        sut = Operator(rawValue: "*")
+        sut = Operator(rawValue: "×")
         let result = sut.calculator(lhs: 10.0, rhs: 10.5)
         XCTAssertEqual(result, 105.0)
     }
