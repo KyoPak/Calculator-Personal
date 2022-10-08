@@ -34,13 +34,13 @@ class FormulaTests: XCTestCase {
         operands.enqueue(30.0)
         operands.enqueue(40.0)
         operands.enqueue(50.0)
-        let operatorComponents = ["+", "*", "-", "/"]
+        let operatorComponents = ["+", "×", "−", "÷"]
         operatorComponents.compactMap { Operator(rawValue: Character($0)) }.forEach { operators.enqueue($0) }
         XCTAssertEqual(try sut.result(), 17.2)
     }
     
     func test_result_Operands비어있을때_결과값확인() {
-        let operatorComponents = ["+", "*", "-", "/"]
+        let operatorComponents = ["+", "×", "−", "÷"]
         operatorComponents.compactMap { Operator(rawValue: Character($0)) }.forEach { operators.enqueue($0) }
         XCTAssertThrowsError(try sut.result())
     }
@@ -61,7 +61,7 @@ class FormulaTests: XCTestCase {
         operands.enqueue(30.0)
         operands.enqueue(40.0)
         operands.enqueue(50.0)
-        let operatorComponents = ["+", "*"]
+        let operatorComponents = ["+", "×"]
         operatorComponents.compactMap { Operator(rawValue: Character($0)) }.forEach { operators.enqueue($0) }
         XCTAssertEqual(try sut.result(), 900.0)
     }
@@ -70,7 +70,7 @@ class FormulaTests: XCTestCase {
         operands.enqueue(10.0)
         operands.enqueue(20.0)
         operands.enqueue(30.0)
-        let operatorComponents = ["+", "*", "-", "/"]
+        let operatorComponents = ["+", "×", "−", "÷"]
         operatorComponents.compactMap { Operator(rawValue: Character($0)) }.forEach { operators.enqueue($0) }
         XCTAssertThrowsError(try sut.result())
     }
