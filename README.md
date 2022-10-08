@@ -5,10 +5,11 @@
 2. [개발환경 및 라이브러리](#-개발환경-및-라이브러리)
 3. [팀원](#-팀원)
 4. [타임라인](#-타임라인)
-5. [UML](#-UML)
+5. [UML](#-uml)
 6. [실행화면](#-실행-화면)
-7. [트러블 슈팅 및 고민](#-트러블-슈팅-및-고민)
-8. [참고링크](#-참고-링크)
+7. [UnitTest Coverage](#-unittest-coverage)
+8. [트러블 슈팅 및 고민](#-트러블-슈팅-및-고민)
+9. [참고링크](#-참고-링크)
 
 
 ## 👋 소개
@@ -31,7 +32,7 @@
 Step - 3 : 2022.09.27 ~ 10.01
 
 
-## ⚙️ UML
+## 🗺 UML
 <details>
 <summary> 
 펼쳐보기
@@ -53,7 +54,17 @@ Step - 3 : 2022.09.27 ~ 10.01
 ![AC버튼](https://user-images.githubusercontent.com/59204352/193729761-2d302f55-15b2-43c8-95f0-eb35376c8170.gif)|![EC버튼](https://user-images.githubusercontent.com/59204352/193729774-ff6208a0-b167-4ce7-8ed5-b148b274a751.gif)|![계산내역](https://user-images.githubusercontent.com/59204352/193729825-1efe6006-b630-414c-bd8c-f6b7ad9c7dbf.gif)
 
 
-
+## ✅ UnitTest Coverage
+- Node
+<img width="1028" alt="스크린샷 2022-10-08 오후 5 22 04" src="https://user-images.githubusercontent.com/59204352/194697950-e53aefcb-26d7-40bf-9044-f3893cea8dfd.png">
+- LinkedList
+<img width="1029" alt="스크린샷 2022-10-08 오후 5 21 56" src="https://user-images.githubusercontent.com/59204352/194697986-3cb8618f-e105-421a-8227-4d6e83caecaa.png">
+- CalculatorItemQueue
+<img width="1029" alt="스크린샷 2022-10-08 오후 5 22 31" src="https://user-images.githubusercontent.com/59204352/194698020-7c650140-a407-451c-920a-b6b3064ccc94.png">
+- ExpressionParser
+<img width="1042" alt="스크린샷 2022-10-08 오후 5 21 28" src="https://user-images.githubusercontent.com/59204352/194698064-a5f7ea56-05e6-4c5d-a1d1-ce4242cce89b.png">
+- Formula & Operator
+<img width="1028" alt="스크린샷 2022-10-08 오후 5 21 17" src="https://user-images.githubusercontent.com/59204352/194698057-f23f55dc-ff0d-45fa-8cf5-5b2e7be44a5b.png">
 
 
 
